@@ -1,0 +1,11 @@
+:root {
+  --primary: #111;
+  --accent: rgb(78, 180, 78);
+  --text: #eee;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+}
