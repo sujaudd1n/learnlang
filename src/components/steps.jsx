@@ -13,7 +13,10 @@ function Step({ number }) {
 
     return (
         <div
-        className="step"
+            className="step"
+            css={css`
+        margin: 60px 0;
+        `}
         >
             <h3>Step {number} - {title}</h3>
             <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(content) }}>
@@ -36,32 +39,27 @@ export default function Steps() {
                 First, the steps will be explained. Then, how those steps apply to different programming languages will be discussed.
             </p>
             <div className="steps">
-
                 <Step
                     number={1}
                 />
                 <Step
                     number={2}
                 />
-
-                <div className="step">
-                    <h3>Step 3 - Learn abstraction mechanisms</h3>
-                </div>
-                <div className="step">
-                    <h3>Step 4 - Learn idioms</h3>
-                </div>
-
-                <div className="step">
-                    <h3>Step 5 - Learn dependency management</h3>
-                </div>
-
-                <div className="step">
-                    <h3>Step 6 - Learn debugging </h3>
-                </div>
-
-                <div className="step">
-                    <h3>Step 7 - Learn testing </h3>
-                </div>
+                <Step
+                    number={3}
+                />
+                <Step
+                    number={4}
+                />
+                <Step
+                    number={5}
+                />
+                <Step
+                    number={6}
+                />
+                <Step
+                    number={7}
+                />
             </div>
 
         </div >

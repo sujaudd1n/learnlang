@@ -9,7 +9,7 @@ body {
   background-color: var(--primary);
   color: var(--text);
   font-family: 'Montserrat', sans-serif;
-  padding: 10px;
+  padding: 0 10px;
 }
 
 a {
