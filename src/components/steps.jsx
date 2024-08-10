@@ -41,15 +41,7 @@ export default function Steps() {
                     <h3>Step 7 - Learn testing </h3>
                 </div>
             </div>
-            <div className="choose">
-                Now, let's see how those steps apply to specific language.
-            </div>
-            <div>
-                <p>
-                    These steps are just kind of suggestions. 
-                </p>
-                <p>Contibute on <a href="https://github.com/sujaudd1n/learnlang">github</a></p>
-            </div>
+           
         </div>
     )
 }
