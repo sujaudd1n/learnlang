@@ -6,8 +6,6 @@ import Contibution from './components/Contribution'
 import SelectLang from './components/SelectLang'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <Header />

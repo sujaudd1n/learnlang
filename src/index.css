@@ -1,11 +1,20 @@
 :root {
   --primary: #111;
-  --accent: rgb(78, 180, 78);
+  --accent: rgb(83, 196, 158);
   --text: #eee;
+  --link: rgb(71, 66, 119);
 }
 
 body {
   background-color: var(--primary);
   color: var(--text);
   font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link)
+}
+a:hover {
+text-decoration: underline;
 }
