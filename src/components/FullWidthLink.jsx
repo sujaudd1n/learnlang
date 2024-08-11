@@ -1,17 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react"
 
-export default function Contibution() {
+export default function FullWidthLink({ href, text}) {
     return (
-        <div>
-            <a
-                href="https://github.com/sujaudd1n/learnlang"
-                target="_blank"
-                css={css`
+        <a
+            href={href}
+            css={css`
                 display: block;
                 margin: 10px 0;
             border-radius: 10px;
             padding: 10px;
+            margin: 60px 0;
             background-color: var(--accent);
             color: var(--primary);
             transition: background-color 200ms ease;
@@ -21,10 +20,8 @@ export default function Contibution() {
             }
             `}
 
-            >
-
-                ✨ Contibute on Github and help us grow.
-            </a>
-        </div>
+        >
+            {text}
+        </a>
     )
 }

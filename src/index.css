@@ -1,3 +1,7 @@
+* {
+  scroll-behavior: smooth;
+}
+
 :root {
   --primary: #111;
   --accent: rgb(83, 196, 158);
@@ -17,6 +21,7 @@ a {
   text-decoration: none;
   color: var(--link)
 }
+
 a:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
