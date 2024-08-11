@@ -7,11 +7,9 @@ export default [
 * **Static vs. Dynamic Typing**: A language can be either statically typed, where the type of a variable is declared at compile time, or dynamically typed, where the type of a variable is determined at runtime.
 
 For example, languages like C++ and Java are strongly and statically typed, which means you need to declare the type of a variable before using it, and it cannot be changed later. On the other hand, languages like Ruby and JavaScript are weakly and dynamically typed, which means you don't need to declare the type of a variable, and it can be changed at any time.
-
-Understanding the typing system of a language is crucial to writing efficient and error-free code.`
+`
     },
     {
-
         "title": "Language Primitives: The Building Blocks of Code",
         "content": `Every programming language has its own set of fundamental elements, known as primitives, that serve as the foundation for writing code. These primitives include:
 
@@ -26,8 +24,7 @@ Understanding the typing system of a language is crucial to writing efficient an
 * **Exception Handling**: Try-catch, error handling, etc.
 
 These primitives provide the basic vocabulary and grammar for expressing ideas and solving problems in code. They are the essential components that allow developers to create more complex structures and programs.
-
-By understanding a language's primitives, you'll be able to write more effective and efficient code, and unlock the full potential of the language.`
+`
     },
     {
         "title": "Abstraction Mechanisms",
@@ -43,8 +40,7 @@ Abstraction mechanisms provide a way to:
 * Enable code reuse and modularity
 
 These mechanisms can take many forms, including functions, procedures, classes, and interfaces. They provide a way to abstract away low-level details and focus on the essential features and behaviors of a system.
-
-By understanding and using abstraction mechanisms effectively, developers can write more efficient, effective, and scalable code that is easier to maintain and extend.`
+`
     },
     {
         "title": "Language Idioms",
@@ -91,8 +87,7 @@ Mastering debugging techniques will help you:
 * **Learn the language faster**: By identifying and fixing errors, you'll gain a deeper understanding of the language and its syntax.
 * **Write better code**: Debugging will help you develop good coding habits and avoid common mistakes.
 * **Build confidence**: As you become more comfortable with debugging, you'll feel more confident in your ability to write code.
-
-By learning how to debug effectively, you'll be able to overcome obstacles and make progress in your learning journey.`
+`
     },
     {
         "title": "Testing",
@@ -116,7 +111,6 @@ When learning a new programming language, it's essential to also learn about tes
 * **Start Early**: Start testing your code from the beginning, rather than waiting until the end.
 * **Write Testable Code**: Write code that is easy to test, with clear and concise functions and methods.
 * **Use Testing Frameworks**: Use testing frameworks and tools to make testing easier and more efficient.
-
-By learning about testing and incorporating it into your development process, you'll be able to write better, more reliable code and ensure that your programs work as expected. `
+`
     }
 ]
