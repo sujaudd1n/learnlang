@@ -15,6 +15,9 @@ export default function LanguageCard({ name, href, color, icon }) {
         background-color: ${color};
         color: var(--primary);
         position: relative;
+        &:hover{
+            filter: brightness(120%)
+        }
         `}
         >
             <div

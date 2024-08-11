@@ -2,13 +2,20 @@
 import { css } from "@emotion/react"
 import LanguageCard from "./LanguageCard"
 
+function createLanguageObject(name, href, color, icon) {
+    return {
+        name: name,
+        href: href,
+        color: color,
+        icon: icon
+    }
+}
+
 const languages = [
-    {
-        name: "JavaScript",
-        href: "/javascript",
-        color: "#F7DF1E",
-        icon: "/icons/javascript.svg"
-    },
+    createLanguageObject("JavaScript", "/javascript", "#F7DF1E", "/icons/javascript.svg"),
+    createLanguageObject("Python", "/python", "#3776AB", "/icons/python.svg"),
+    createLanguageObject("C", "/c", "#A8B9CC", "/icons/c.svg"),
+    createLanguageObject("C++", "/cpp", "#00599C", "/icons/cplusplus.svg"),
 ]
 
 export default function SelectLang() {
@@ -19,8 +26,8 @@ export default function SelectLang() {
                 Now, let's see how those steps apply to specific language.
             </p>
             <div
-            className="langlist"
-            css={css`
+                className="langlist"
+                css={css`
             display: flex;
             justify-content: space-around;
             flex-flow: row wrap;
