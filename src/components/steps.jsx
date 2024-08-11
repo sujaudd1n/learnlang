@@ -7,9 +7,8 @@ import stepDescription from "../data/stepDescription";
 const converter = new Showdown.Converter();
 
 function Step({ number }) {
-    const title = stepDescription.get(number).title;
-    const content = stepDescription.get(number).content;
-    console.log(content)
+    const title = stepDescription[number].title;
+    const content = stepDescription[number].content;
 
     return (
         <div
@@ -39,27 +38,11 @@ export default function Steps() {
                 First, the steps will be explained. Then, how those steps apply to different programming languages will be discussed.
             </p>
             <div className="steps">
-                <Step
-                    number={1}
-                />
-                <Step
-                    number={2}
-                />
-                <Step
-                    number={3}
-                />
-                <Step
-                    number={4}
-                />
-                <Step
-                    number={5}
-                />
-                <Step
-                    number={6}
-                />
-                <Step
-                    number={7}
-                />
+                {stepDescription.map((sd, idx) => (
+                    <Step
+                        key={idx}
+                        number={idx}
+                    />))}
             </div>
 
         </div >

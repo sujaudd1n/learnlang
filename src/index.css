@@ -1,6 +1,7 @@
 :root {
   --primary: #111;
   --accent: rgb(83, 196, 158);
+  --accent-light: rgb(93, 214, 174);
   --text: #eee;
   --link: rgb(71, 66, 119);
 }

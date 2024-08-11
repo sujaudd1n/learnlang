@@ -1,9 +1,7 @@
-export default new Map([
-    [
-        1,
-        {
-            "title": "Understanding Types and Typing",
-            "content": `When learning a new programming language, it's essential to understand its typing system. There are two main aspects to consider:
+export default [
+    {
+        "title": "Understanding Types and Typing",
+        "content": `When learning a new programming language, it's essential to understand its typing system. There are two main aspects to consider:
 
 * **Strong vs. Weak Typing**: A language can be either strongly typed, where a variable can only hold a specific type of data, or weakly typed, where a variable can hold any type of data.
 * **Static vs. Dynamic Typing**: A language can be either statically typed, where the type of a variable is declared at compile time, or dynamically typed, where the type of a variable is determined at runtime.
@@ -11,16 +9,11 @@ export default new Map([
 For example, languages like C++ and Java are strongly and statically typed, which means you need to declare the type of a variable before using it, and it cannot be changed later. On the other hand, languages like Ruby and JavaScript are weakly and dynamically typed, which means you don't need to declare the type of a variable, and it can be changed at any time.
 
 Understanding the typing system of a language is crucial to writing efficient and error-free code.`
-        }
-    ],
+    },
+    {
 
-
-    [
-        2,
-        {
-
-            "title": "Language Primitives: The Building Blocks of Code",
-            "content": `Every programming language has its own set of fundamental elements, known as primitives, that serve as the foundation for writing code. These primitives include:
+        "title": "Language Primitives: The Building Blocks of Code",
+        "content": `Every programming language has its own set of fundamental elements, known as primitives, that serve as the foundation for writing code. These primitives include:
 
 * **Basic Data Types**: Numbers, strings, booleans, etc.
 * **Data Structures**: Arrays, lists, dictionaries, etc.
@@ -35,14 +28,10 @@ Understanding the typing system of a language is crucial to writing efficient an
 These primitives provide the basic vocabulary and grammar for expressing ideas and solving problems in code. They are the essential components that allow developers to create more complex structures and programs.
 
 By understanding a language's primitives, you'll be able to write more effective and efficient code, and unlock the full potential of the language.`
-        }
-
-    ],
-    [
-        3,
-        {
-            "title": "Abstraction Mechanisms",
-            "content": `Abstraction mechanisms are fundamental concepts in programming that enable developers to create complex systems by breaking them down into smaller, manageable components. They allow developers to hide underlying details and expose only the necessary information, making it easier to write, maintain, and extend code.
+    },
+    {
+        "title": "Abstraction Mechanisms",
+        "content": `Abstraction mechanisms are fundamental concepts in programming that enable developers to create complex systems by breaking them down into smaller, manageable components. They allow developers to hide underlying details and expose only the necessary information, making it easier to write, maintain, and extend code.
 
 When learning a new programming language, it's essential to understand abstraction mechanisms, which help you create complex systems by breaking them down into smaller, more manageable components.
 
@@ -56,13 +45,10 @@ Abstraction mechanisms provide a way to:
 These mechanisms can take many forms, including functions, procedures, classes, and interfaces. They provide a way to abstract away low-level details and focus on the essential features and behaviors of a system.
 
 By understanding and using abstraction mechanisms effectively, developers can write more efficient, effective, and scalable code that is easier to maintain and extend.`
-        }
-    ],
-    [
-        4,
-        {
-            "title": "Language Idioms",
-            "content": `Language idioms are unique programming patterns and constructs that are specific to a particular language. They are the common ways of expressing ideas and solving problems in that language, and are often used to simplify code and make it more readable.
+    },
+    {
+        "title": "Language Idioms",
+        "content": `Language idioms are unique programming patterns and constructs that are specific to a particular language. They are the common ways of expressing ideas and solving problems in that language, and are often used to simplify code and make it more readable.
 
 Language idioms can include:
 
@@ -72,13 +58,10 @@ Language idioms can include:
 * Built-in functions or libraries
 
 They are used to take advantage of a language's strengths and features, and to write code that is efficient, effective, and easy to maintain.`
-        }
-    ],
-    [
-        5,
-        {
-            "title": "Libraries and Dependency Management",
-            "content": `Libraries are reusable collections of code that provide a way to perform specific tasks or functions. Managing libraries and their dependencies is crucial for building robust and maintainable software systems.
+    },
+    {
+        "title": "Libraries and Dependency Management",
+        "content": `Libraries are reusable collections of code that provide a way to perform specific tasks or functions. Managing libraries and their dependencies is crucial for building robust and maintainable software systems.
 
 This involves:
 
@@ -91,12 +74,10 @@ Effective library and dependency management enables developers to:
 * **Reuse code** and avoid duplicating effort
 * **Build scalable and maintainable systems**
 * **Ensure reproducibility** and reliability across different environments`
-        }
-    ],
-    [6,
-        {
-            "title": "Debugging",
-            "content": `When learning a new programming language, debugging is an essential skill to master. Debugging involves identifying and fixing errors or bugs in your code, and it's a crucial part of the learning process.
+    },
+    {
+        "title": "Debugging",
+        "content": `When learning a new programming language, debugging is an essential skill to master. Debugging involves identifying and fixing errors or bugs in your code, and it's a crucial part of the learning process.
 
 As you learn a new language, you'll want to know:
 
@@ -112,12 +93,10 @@ Mastering debugging techniques will help you:
 * **Build confidence**: As you become more comfortable with debugging, you'll feel more confident in your ability to write code.
 
 By learning how to debug effectively, you'll be able to overcome obstacles and make progress in your learning journey.`
-        }
-    ],
-    [7,
-        {
-            "title": "Testing",
-            "content": `
+    },
+    {
+        "title": "Testing",
+        "content": `
 When learning a new programming language, it's essential to also learn about testing. Testing is the process of verifying that your code works as expected and catching any errors or bugs.
 
 **Why Testing is Important**
@@ -139,6 +118,5 @@ When learning a new programming language, it's essential to also learn about tes
 * **Use Testing Frameworks**: Use testing frameworks and tools to make testing easier and more efficient.
 
 By learning about testing and incorporating it into your development process, you'll be able to write better, more reliable code and ensure that your programs work as expected. `
-        }
-    ]
-])
+    }
+]
