@@ -1,12 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react"
 import { SvgIcon } from "@mui/material"
+import { Link } from "react-router-dom"
 
 export default function LanguageCard({ name, href, color, icon }) {
     return (
-        <a
+        <Link
             id="language-card"
-            href={href}
+            to={href}
             css={css`
         display: block;
         width: 150px;
@@ -41,6 +42,6 @@ export default function LanguageCard({ name, href, color, icon }) {
                 />
                 {name}
             </div>
-        </a>
+        </Link>
     )
 }

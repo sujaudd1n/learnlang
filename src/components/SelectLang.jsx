@@ -2,23 +2,9 @@
 import { css } from "@emotion/react"
 import LanguageCard from "./LanguageCard"
 
-function createLanguageObject(name, href, color, icon) {
-    return {
-        name: name,
-        href: href,
-        color: color,
-        icon: icon
-    }
-}
 
-const languages = [
-    createLanguageObject("JavaScript", "/javascript", "#F7DF1E", "/icons/javascript.svg"),
-    createLanguageObject("Python", "/python", "#3776AB", "/icons/python.svg"),
-    createLanguageObject("C", "/c", "#A8B9CC", "/icons/c.svg"),
-    createLanguageObject("C++", "/cpp", "#00599C", "/icons/cplusplus.svg"),
-]
 
-export default function SelectLang() {
+export default function SelectLang({languages}) {
     return (
         <div id="selectlang">
             <h2>Select Language</h2>
