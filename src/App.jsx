@@ -46,8 +46,8 @@ function App() {
         {languages.map(language => (
           <Route
             key={language.name}
-            path={language.name}
-            element={<LanguageDetail name={language.name} />}
+            path={language.href}
+            element={<LanguageDetail name={language.href.slice(1)} />}
           />
 
         ))}
