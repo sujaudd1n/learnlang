@@ -34,15 +34,24 @@ function App() {
         <Route path="/" element={
           <>
             <Header />
-            <FullWidthLink
-              href="#selectlang"
-              text="</> Choose Your Language and Get Started!"
-            />
-            <Steps />
-            <SelectLang languages={languages} />
 
+            <div
+            className="main"
+            css={css`
+            @media (min-width: 928px) {
+              display: flex;
+              flex-flow: row;
+              justify-content: space-between;
+              gap: 30px;
+            }
+            `}
+            >
+              <Steps />
+              <SelectLang languages={languages} />
+            </div>
           </>
         } />
+
         {languages.map(language => (
           <Route
             key={language.name}
@@ -52,10 +61,7 @@ function App() {
 
         ))}
       </Routes>
-      <FullWidthLink
-        href="https://github.com/sujaudd1n/learnlang"
-        text="✨ Contibute on Github and help us grow."
-      />
+
       <Footer />
     </>
   )

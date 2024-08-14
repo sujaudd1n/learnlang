@@ -26,7 +26,22 @@ function Step({ number }) {
 }
 export default function Steps() {
     return (
-        <div>
+        <div
+        css={css`
+        flex-basis: 50%;
+        `}
+        >
+            <div>
+                <p>
+                    There are some common steps and patterns in learning a new language. Here, the goal is to give you a simple and comprehensive guide and steps to learn a new programming language, making the process fast and efficient.
+                </p>
+                <p>
+                    Although there are many approaches, this site is currently based on mostly the steps mentioned in the book <q>Engineering Software as a Service: An Agile Approach Using Cloud Computing</q> by Armando Fox and David Patterson.
+                </p>
+                <p>
+                    First, the steps will be explained. Then, how those steps apply to different programming languages will be discussed.
+                </p>
+            </div>
             <h2>📝 Steps</h2>
             <div className="steps">
                 {stepDescription.map((sd, idx) => (
