@@ -17,7 +17,8 @@ export default function Header() {
             background-image: linear-gradient(to right, var(--text), var(--accent));
             background-clip: text;
             font-size: calc(2rem + 3dvw);
-            margin: calc(20px + 5dvw) 0;
+            margin: calc(20px + 5dvw) auto;
+            max-width: max(80dvw, 500px);
             `}
                 >
                     Simple yet Comprehensive guide to learn a new language.</h1>
