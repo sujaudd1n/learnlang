@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="245.46555mm"
-   height="47.142406mm"
-   viewBox="0 0 245.46555 47.142406"
+   width="250.54611mm"
+   height="57.820454mm"
+   viewBox="0 0 250.54611 57.820454"
    version="1.1"
    id="svg1"
    xmlns="http://www.w3.org/2000/svg"
@@ -13,16 +13,23 @@
      id="defs1" />
   <g
      id="layer1"
-     transform="translate(16.043497,-92.752233)">
+     transform="translate(22.109263,-104.29876)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:'Josefin Sans';-inkscape-font-specification:'Josefin Sans';fill:#87de87;stroke-width:0.264583"
-       x="-21.326698"
-       y="129.48064"
+       style="font-size:47.6722px;font-family:'Josefin Sans';-inkscape-font-specification:'Josefin Sans';fill:#00ff00;stroke-width:0.248293"
+       x="-13.925629"
+       y="146.21126"
        id="text1"><tspan
          id="tspan1"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Josefin Sans';-inkscape-font-specification:'Josefin Sans';fill:#87de87;stroke-width:0.264583"
-         x="-21.326698"
-         y="129.48064">LearnLang</tspan></text>
+         style="fill:#00ff00;stroke-width:0.248293"
+         x="-13.925629"
+         y="146.21126">LearnLang</tspan></text>
+    <rect
+       style="fill:none;stroke-width:0.264583"
+       id="rect1"
+       width="250.54611"
+       height="57.82045"
+       x="-22.109262"
+       y="104.29877" />
   </g>
 </svg>
