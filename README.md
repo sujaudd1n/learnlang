@@ -1,10 +1,19 @@
-# Learnlang
+<div align="center">
+    <a href="#"><img src="./learnlang.svg" alt="learnlang logo"></a>
+</div>
 
-A simple yet comprehensive guide to learn a new programming language.
-While there are many ways to learn a language, some methods are more
-useful. 
+<p align="center">
+    A simple yet comprehensive guide to learn a new programming language.
+</p>
 
-Learn More: [Learnlang](#)
+<p align="center">
+    <a href="#">Start learning</a>
+</p>
+
+<div align="center">
+![License](https://img.shields.io/badge/License-MIT-green)
+![Website](https://img.shields.io/badge/Website-Online-green)
+</div>
 
 ## Contributing
 
