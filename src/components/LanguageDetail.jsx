@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react"
 import { useEffect, useState } from "react"
-import Showdown from "showdown"
+import Showdown from "showdown";
 
 const converter = new Showdown.Converter();
 
