@@ -1,5 +1,5 @@
 <div align="center">
-    <a href="#"><img width="400" src="./learnlang.svg" alt="learnlang logo"></a>
+    <a href="#"><img width="400" src="./learnlang.png" alt="learnlang logo"></a>
 </div>
 
 <p align="center">
