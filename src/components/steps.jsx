@@ -27,7 +27,7 @@ function Step({ number }) {
 export default function Steps() {
     return (
         <div
-        css={css`
+            css={css`
         flex-basis: 50%;
         `}
         >
@@ -42,8 +42,11 @@ export default function Steps() {
                     First, the steps will be explained. Then, how those steps apply to different programming languages will be discussed.
                 </p>
             </div>
-            <h2>📝 Steps</h2>
-            <div className="steps">
+            <div
+                id="steps"
+                className="steps"
+            >
+                <h2>📝 Steps</h2>
                 {stepDescription.map((sd, idx) => (
                     <Step
                         key={idx}

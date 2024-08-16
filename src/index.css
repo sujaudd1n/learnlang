@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   scroll-behavior: smooth;
 }
@@ -9,13 +13,14 @@
   --accent-light: rgb(93, 214, 174);
   --text: #eee;
   --link: rgb(71, 66, 119);
+  --max-page-width: 1500px;
 }
 
 body {
   background-color: var(--primary);
   color: var(--text);
   font-family: 'Montserrat', sans-serif;
-  padding: 0 10px;
+  padding: 0 20px;
 
   background-image: radial-gradient(circle at top 50dvh right 30%,
       var(--accent-tp) 0%,
@@ -29,4 +34,8 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+p {
+  line-height:1.5;
 }

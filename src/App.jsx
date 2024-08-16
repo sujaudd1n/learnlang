@@ -42,7 +42,9 @@ function App() {
               display: flex;
               flex-flow: row;
               justify-content: space-between;
-              gap: 30px;
+              gap: 50px;
+              max-width: 1500px;
+              margin: 0 auto;
             }
             `}
             >
