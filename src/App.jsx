@@ -38,6 +38,7 @@ function App() {
             <div
               className="main"
               css={css`
+              margin: 0 auto 80px 0;
             @media (min-width: 928px) {
               display: flex;
               flex-flow: row;

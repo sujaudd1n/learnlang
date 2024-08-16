@@ -14,9 +14,8 @@ function Step({ number }) {
 
     return (
         <div
-            className="step"
             css={css`
-            margin-bottom: 50px;
+            margin-bottom: 10px;
         `}
         >
             <h3>📌 Step {number + 1} - {title}</h3>
@@ -29,6 +28,10 @@ export default function Steps() {
         <div
             css={css`
         flex-basis: 50%;
+        display: flex;
+        flex-flow: column;
+        gap: 40px;
+        margin-bottom: 80px;
         `}
         >
             <div>
