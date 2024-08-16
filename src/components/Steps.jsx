@@ -3,6 +3,8 @@ import { css } from "@emotion/react"
 
 import Showdown from "showdown";
 import stepDescription from "../data/stepDescription";
+import { Link as RouterLink } from "react-router-dom";
+import { Button } from "@mui/joy";
 
 const converter = new Showdown.Converter();
 
@@ -17,9 +19,7 @@ function Step({ number }) {
             margin-bottom: 50px;
         `}
         >
-            <h3>📌 Step {number} - {title}</h3>
-            <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(content) }}>
-            </div>
+            <h3>📌 Step {number + 1} - {title}</h3>
         </div>
 
     )
@@ -53,6 +53,11 @@ export default function Steps() {
                         number={idx}
                     />))}
             </div>
+            <RouterLink
+                to="/steps"
+            >
+                <Button>Learn more</Button>
+            </RouterLink>
         </div >
     )
 }

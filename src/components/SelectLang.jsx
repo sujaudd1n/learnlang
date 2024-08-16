@@ -28,7 +28,7 @@ export default function SelectLang({languages}) {
                     <LanguageCard
                         key={language.name}
                         name={language.name}
-                        href={language.href}
+                        path={language.path}
                         color={language.color}
                         icon={language.icon}
                     />

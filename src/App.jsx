@@ -3,17 +3,17 @@
 import { css } from "@emotion/react"
 import { useState } from 'react'
 import Header from './components/Header'
-import Steps from './components/steps'
+import Steps from './components/Steps'
 import Footer from "./components/Footer"
 import SelectLang from './components/SelectLang'
-import FullWidthLink from './components/FullWidthLink'
-import LanguageDetail from "./components/LanguageDetail"
+import LanguageDetail from "./components/RenderedMarkdown"
 import { Routes, Route } from "react-router-dom"
+import RenderedMarkdown from "./components/RenderedMarkdown"
 
-function createLanguageObject(name, href, color, icon) {
+function createLanguageObject(name, path, color, icon) {
   return {
     name: name,
-    href: href,
+    path: path,
     color: color,
     icon: icon
   }
@@ -36,8 +36,8 @@ function App() {
             <Header />
 
             <div
-            className="main"
-            css={css`
+              className="main"
+              css={css`
             @media (min-width: 928px) {
               display: flex;
               flex-flow: row;
@@ -57,11 +57,11 @@ function App() {
         {languages.map(language => (
           <Route
             key={language.name}
-            path={language.href}
-            element={<LanguageDetail name={language.href.slice(1)} />}
+            path={language.path}
+            element={<RenderedMarkdown filepath={`/languages/${language.path.slice(1)}.md`} />}
           />
-
         ))}
+        <Route path="/steps" element={<RenderedMarkdown filepath="/steps.md" />} />
       </Routes>
 
       <Footer />

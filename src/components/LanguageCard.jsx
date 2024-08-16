@@ -2,11 +2,11 @@
 import { css } from "@emotion/react"
 import { Link } from "react-router-dom"
 
-export default function LanguageCard({ name, href, color, icon }) {
+export default function LanguageCard({ name, path, color, icon }) {
     return (
         <Link
             id="language-card"
-            to={href}
+            to={path}
             css={css`
         display: block;
         width: 150px;
