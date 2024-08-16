@@ -1,6 +1,6 @@
 export default [
     {
-        "title": "Understanding Types and Typing",
+        "title": "Learn Types and Typing",
         "content": `When learning a new programming language, it's essential to understand its typing system. There are two main aspects to consider:
 
 * **Strong vs. Weak Typing**: A language can be either strongly typed, where a variable can only hold a specific type of data, or weakly typed, where a variable can hold any type of data.
@@ -10,7 +10,7 @@ For example, languages like C++ and Java are strongly and statically typed, whic
 `
     },
     {
-        "title": "Language Primitives: The Building Blocks of Code",
+        "title": "Learn Language Primitives",
         "content": `Every programming language has its own set of fundamental elements, known as primitives, that serve as the foundation for writing code. These primitives include:
 
 * **Basic Data Types**: Numbers, strings, booleans, etc.
@@ -27,7 +27,7 @@ These primitives provide the basic vocabulary and grammar for expressing ideas a
 `
     },
     {
-        "title": "Abstraction Mechanisms",
+        "title": "Learn Abstraction Mechanisms",
         "content": `Abstraction mechanisms are fundamental concepts in programming that enable developers to create complex systems by breaking them down into smaller, manageable components. They allow developers to hide underlying details and expose only the necessary information, making it easier to write, maintain, and extend code.
 
 When learning a new programming language, it's essential to understand abstraction mechanisms, which help you create complex systems by breaking them down into smaller, more manageable components.
@@ -43,7 +43,7 @@ These mechanisms can take many forms, including functions, procedures, classes, 
 `
     },
     {
-        "title": "Language Idioms",
+        "title": "Learn Language Idioms",
         "content": `Language idioms are unique programming patterns and constructs that are specific to a particular language. They are the common ways of expressing ideas and solving problems in that language, and are often used to simplify code and make it more readable.
 
 Language idioms can include:
@@ -56,7 +56,7 @@ Language idioms can include:
 They are used to take advantage of a language's strengths and features, and to write code that is efficient, effective, and easy to maintain.`
     },
     {
-        "title": "Libraries and Dependency Management",
+        "title": "Learn Libraries and Dependency Management",
         "content": `Libraries are reusable collections of code that provide a way to perform specific tasks or functions. Managing libraries and their dependencies is crucial for building robust and maintainable software systems.
 
 This involves:
@@ -72,7 +72,7 @@ Effective library and dependency management enables developers to:
 * **Ensure reproducibility** and reliability across different environments`
     },
     {
-        "title": "Debugging",
+        "title": "Learn Debugging",
         "content": `When learning a new programming language, debugging is an essential skill to master. Debugging involves identifying and fixing errors or bugs in your code, and it's a crucial part of the learning process.
 
 As you learn a new language, you'll want to know:
@@ -90,9 +90,8 @@ Mastering debugging techniques will help you:
 `
     },
     {
-        "title": "Testing",
-        "content": `
-When learning a new programming language, it's essential to also learn about testing. Testing is the process of verifying that your code works as expected and catching any errors or bugs.
+        "title": "Learn Testing",
+        "content": `When learning a new programming language, it's essential to also learn about testing. Testing is the process of verifying that your code works as expected and catching any errors or bugs.
 
 **Why Testing is Important**
 

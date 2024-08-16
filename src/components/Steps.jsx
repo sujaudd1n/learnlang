@@ -10,7 +10,7 @@ const converter = new Showdown.Converter();
 
 function Step({ number }) {
     const title = stepDescription[number].title;
-    const content = stepDescription[number].content;
+    const content = stepDescription[number].content.split('\n')[0];
 
     return (
         <div
@@ -18,7 +18,12 @@ function Step({ number }) {
             margin-bottom: 10px;
         `}
         >
-            <h3>📌 Step {number + 1} - {title}</h3>
+            <h3>⚡ Step {number + 1} - {title}</h3>
+            <p
+            css={css`
+            padding-left: 40px;
+            `}
+            >{content}</p>
         </div>
 
     )
@@ -59,7 +64,7 @@ export default function Steps() {
             <RouterLink
                 to="/steps"
             >
-                <Button>Learn more</Button>
+                <Button>Learn More</Button>
             </RouterLink>
         </div >
     )

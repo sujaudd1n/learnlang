@@ -1,14 +1,10 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from "@emotion/react"
-import { useState } from 'react'
-import Header from './components/Header'
-import Steps from './components/Steps'
 import Footer from "./components/Footer"
-import SelectLang from './components/SelectLang'
-import LanguageDetail from "./components/RenderedMarkdown"
 import { Routes, Route } from "react-router-dom"
 import RenderedMarkdown from "./components/RenderedMarkdown"
+import Homepage from "./components/Homepage"
 
 function createLanguageObject(name, path, color, icon) {
   return {
@@ -30,31 +26,7 @@ function App() {
   return (
     <>
       <Routes>
-
-        <Route path="/" element={
-          <>
-            <Header />
-
-            <div
-              className="main"
-              css={css`
-              margin: 0 auto 80px 0;
-            @media (min-width: 928px) {
-              display: flex;
-              flex-flow: row;
-              justify-content: space-between;
-              gap: 50px;
-              max-width: 1500px;
-              margin: 0 auto;
-            }
-            `}
-            >
-              <Steps />
-              <SelectLang languages={languages} />
-            </div>
-          </>
-        } />
-
+        <Route path="/" element={<Homepage languages={languages} />} />
         {languages.map(language => (
           <Route
             key={language.name}
