@@ -2,13 +2,27 @@
 
 import { css } from "@emotion/react"
 import { useEffect, useState } from "react"
-import Showdown from "showdown";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Button } from "@mui/joy";
 import { Link } from "react-router-dom";
+import MarkdownIt from "markdown-it";
 import "./RenderedMarkdown.css"
+import hljs from 'highlight.js';
+import "highlight.js/styles/stackoverflow-dark.min.css";
 
-const converter = new Showdown.Converter();
+const md = MarkdownIt(
+    {
+        highlight: function (str, lang) {
+            if (lang && hljs.getLanguage(lang)) {
+                try {
+                    return hljs.highlight(str, { language: lang, ignoreIllegals: true }).value;
+                } catch (__) { }
+            }
+
+            return ''; // use external default escaping
+        }
+    }
+);
 
 export default function RenderedMarkdown({ filepath }) {
     const [markdown, setMarkdown] = useState('');
@@ -59,7 +73,7 @@ export default function RenderedMarkdown({ filepath }) {
             </Link>
 
             <div
-                dangerouslySetInnerHTML={{ __html: converter.makeHtml(markdown) }}>
+                dangerouslySetInnerHTML={{ __html: md.render(markdown) }}>
             </div>
 
         </div >

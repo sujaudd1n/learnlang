@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react"
 
-import Showdown from "showdown";
 import stepDescription from "../data/stepDescription";
 import { Link as RouterLink } from "react-router-dom";
 import { Button } from "@mui/joy";

@@ -21,3 +21,10 @@
 .rendered-markdown h6 {
     margin-top: 20px;
 }
+
+pre:has(> code) 
+{
+    background-color: var(--accent-dark);
+    padding: 10px;
+    border-radius: 10px;
+}

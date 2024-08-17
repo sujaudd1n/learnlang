@@ -8,7 +8,9 @@
 
 :root {
   --primary: #111;
+  --primary-light: #313131;
   --accent: rgb(83, 196, 158);
+  --accent-dark: rgb(16, 29, 24);
   --accent-tp: rgba(83, 196, 158, 0.219);
   --accent-light: rgb(93, 214, 174);
   --text: #eee;
