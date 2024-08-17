@@ -12,6 +12,7 @@ export default function Header() {
                 margin-bottom: 80px;
                 max-width: max(var(--max-page-width), 80dvw);
                 margin: 0 auto;
+
             `}
         >
             <Stack

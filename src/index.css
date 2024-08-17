@@ -2,11 +2,12 @@
 
 * {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 :root {
   --primary: #111;
-  --primary-light: #313131;
+  --primary-light: #202020;
   --accent: #53c49e;
   --accent-dark: rgb(16, 29, 24);
   --accent-tp: rgba(83, 196, 158, 0.219);
@@ -20,7 +21,10 @@ body {
   background-color: var(--primary);
   color: var(--text);
   font-family: 'Montserrat', sans-serif;
-  padding: 0 20px;
+  padding: 0 20px 100px 20px;
+  margin: 0;
+  min-height: 100dvh;
+  position: relative;
 
   background-image: radial-gradient(circle at top 50dvh right 30%,
       var(--accent-tp) 0%,

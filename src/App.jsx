@@ -16,10 +16,10 @@ function createLanguageObject(name, path, color, icon) {
 }
 
 const languages = [
-  createLanguageObject("JavaScript", "/javascript", "#F7DF1E", "/icons/javascript.svg"),
-  createLanguageObject("Python", "/python", "#3776AB", "/icons/python.svg"),
-  createLanguageObject("C", "/c", "#A8B9CC", "/icons/c.svg"),
-  createLanguageObject("C++", "/cpp", "#00599C", "/icons/cplusplus.svg"),
+  createLanguageObject("JavaScript", "/languages/javascript", "#F7DF1E", "/icons/javascript.svg"),
+  createLanguageObject("Python", "/languages/python", "#3776AB", "/icons/python.svg"),
+  createLanguageObject("C", "/languages/c", "#A8B9CC", "/icons/c.svg"),
+  createLanguageObject("C++", "/languages/cpp", "#00599C", "/icons/cplusplus.svg"),
 ]
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
           <Route
             key={language.name}
             path={language.path}
-            element={<RenderedMarkdown filepath={`/languages/${language.path.slice(1)}.md`} />}
+            element={<RenderedMarkdown filepath={language.path + '.md'} />}
           />
         ))}
         <Route path="/steps" element={<RenderedMarkdown filepath="/steps.md" />} />

@@ -33,7 +33,7 @@ export default function RenderedMarkdown({ filepath }) {
 
 
     useEffect(() => {
-        fetch(`${filepath.toLowerCase()}`)
+        fetch(filepath)
             .then(res => res.text())
             .then(markdown => {
                 setMarkdown(markdown)
@@ -74,7 +74,8 @@ export default function RenderedMarkdown({ filepath }) {
             className="rendered-markdown"
             css={css`
         max-width: 928px;
-        margin: 30px auto 100px auto;
+        margin: 0 auto 100px auto;
+        padding-top: 30px;
         `}
         >
             <Link
