@@ -3,12 +3,14 @@
 import { css } from "@emotion/react"
 import { useEffect, useState } from "react"
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { Button } from "@mui/joy";
+import { Button, Stack, Alert } from "@mui/joy";
+import { CircularProgress } from "@mui/joy";
 import { Link } from "react-router-dom";
 import MarkdownIt from "markdown-it";
-import "./RenderedMarkdown.css"
 import hljs from 'highlight.js';
+
 import "highlight.js/styles/stackoverflow-dark.min.css";
+import "./RenderedMarkdown.css"
 
 const md = MarkdownIt(
     {
@@ -46,14 +48,27 @@ export default function RenderedMarkdown({ filepath }) {
 
     if (loading) {
         return (
-            <div>Fetching data!</div>
+            <Stack direction="column" alignItems="center"
+                sx={{
+                    margin: "50px 0"
+                }}
+            >
+                <CircularProgress />
+                <p>Loading</p>
+            </Stack>
+
+
         )
     }
+
     if (error) {
         return (
-            <div>Error while fetching data!: {error} </div>
+            <Alert color="danger"
+                sx={{ margin: "50px 0" }}
+            >Error while fetching data!: {error} </Alert>
         )
     }
+
     return (
         <div
             className="rendered-markdown"
@@ -75,7 +90,8 @@ export default function RenderedMarkdown({ filepath }) {
             <div
                 dangerouslySetInnerHTML={{ __html: md.render(markdown) }}>
             </div>
-
         </div >
+
+
     )
 }

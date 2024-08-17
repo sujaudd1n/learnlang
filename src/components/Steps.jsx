@@ -48,8 +48,6 @@ export default function Steps() {
                 <p>
                     We'll start by outlining the key steps to learn a new programming language, followed by a discussion on how these steps can be applied to various programming languages, helping you navigate the learning process with ease.
                 </p>
-
-
             </div>
             <div
                 id="steps"
