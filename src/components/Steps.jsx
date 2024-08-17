@@ -40,14 +40,16 @@ export default function Steps() {
         >
             <div>
                 <p>
-                    There are some common steps and patterns in learning a new language. Here, the goal is to give you a simple and comprehensive guide and steps to learn a new programming language, making the process fast and efficient.
+                    For learning a new programming language, there are steps and patterns that can streamline the learning process. This guide provides a straightforward and comprehensive roadmap to help you quickly and efficiently acquire a new programming language.
                 </p>
                 <p>
-                    Although there are many approaches, this site is currently based on mostly the steps mentioned in the book <q>Engineering Software as a Service: An Agile Approach Using Cloud Computing</q> by Armando Fox and David Patterson.
+                    Our approach is informed by established best practices, drawing inspiration from the book "Engineering Software as a Service: An Agile Approach Using Cloud Computing" by Armando Fox and David Patterson.
                 </p>
                 <p>
-                    First, the steps will be explained. Then, how those steps apply to different programming languages will be discussed.
+                    We'll start by outlining the key steps to learn a new programming language, followed by a discussion on how these steps can be applied to various programming languages, helping you navigate the learning process with ease.
                 </p>
+
+
             </div>
             <div
                 id="steps"
