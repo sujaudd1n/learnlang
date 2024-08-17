@@ -31,15 +31,6 @@ Steps to learn a new language
 - Debugging
 - Testing
 
-[Learn More](https://learnlang.onrender.com/steps)
-
-## Select Language
-
-- [JavaScript](https://learnlang.onrender.com/languages/javascript)
-- [Python](https://learnlang.onrender.com/languages/python)
-
-
-
 ## Share
 
 <div align="center">
