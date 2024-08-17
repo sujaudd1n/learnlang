@@ -3,6 +3,10 @@
 import { css } from "@emotion/react"
 import { useEffect, useState } from "react"
 import Showdown from "showdown";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { Button } from "@mui/joy";
+import { Link } from "react-router-dom";
+import "./RenderedMarkdown.css"
 
 const converter = new Showdown.Converter();
 
@@ -38,8 +42,26 @@ export default function RenderedMarkdown({ filepath }) {
     }
     return (
         <div
-            dangerouslySetInnerHTML={{ __html: converter.makeHtml(markdown) }}
+            className="rendered-markdown"
+            css={css`
+        max-width: 928px;
+        margin: 30px auto 100px auto;
+        `}
         >
-        </div>
+            <Link
+                to="/"
+            >
+                <Button variant="plain"
+                    startDecorator={<ArrowBackIcon />}
+                >
+                    Home
+                </Button>
+            </Link>
+
+            <div
+                dangerouslySetInnerHTML={{ __html: converter.makeHtml(markdown) }}>
+            </div>
+
+        </div >
     )
 }

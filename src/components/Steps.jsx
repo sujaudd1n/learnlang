@@ -6,7 +6,6 @@ import stepDescription from "../data/stepDescription";
 import { Link as RouterLink } from "react-router-dom";
 import { Button } from "@mui/joy";
 
-const converter = new Showdown.Converter();
 
 function Step({ number }) {
     const title = stepDescription[number].title;
@@ -20,12 +19,13 @@ function Step({ number }) {
         >
             <h3>⚡ Step {number + 1} - {title}</h3>
             <p
-            css={css`
+                css={css`
             padding-left: 40px;
             `}
-            >{content}</p>
+            >
+                {content}
+            </p>
         </div>
-
     )
 }
 export default function Steps() {

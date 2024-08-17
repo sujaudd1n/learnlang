@@ -4,15 +4,24 @@ import LanguageCard from "./LanguageCard"
 
 
 
-export default function SelectLang({languages}) {
+export default function SelectLang({ languages }) {
     return (
         <div id="selectlang"
-        css={css`
+            css={css`
         flex-basis: 50%;
         `}
         >
-            <h2>Select Language</h2>
-            <p>
+            <h2
+            css={css`
+            margin-bottom: 0;
+            `}
+            >Select Language</h2>
+            <p
+            css={css`
+            margin-top: 7px;
+            margin-bottom: 30px;
+            `}
+            >
                 Now, let's see how those steps apply to specific language.
             </p>
             <div

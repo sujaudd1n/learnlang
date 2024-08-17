@@ -39,3 +39,7 @@ a:hover {
 p {
   line-height:1.5;
 }
+
+li + li {
+  margin-top: 8px;
+}

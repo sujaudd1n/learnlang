@@ -1,30 +1,39 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react"
-import { Link } from "@mui/joy"
+import { Link, Stack } from "@mui/joy"
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function Footer() {
     return (
-        <footer>
-            <Link
-                underline="none"
-                variant="solid"
-                target="_blank"
-                href="https://github.com/sujaudd1n/learnlang"
-                sx={{
-                    padding: "10px",
-                    display: "block",
-                    maxWidth: "fit-content",
-                    margin: "0 auto",
-                    borderRadius: "5px"
-                }}
-            >
-                ✨ Contibute and help us grow on Github
-            </Link>
-            <p
-                css={css`
+        <footer
+            css={css`
+        max-width: var(--max-page-width);
+        margin: 0 auto;
+        `}
+        >
+            <Stack>
+                <Link
+                    underline="none"
+                    target="_blank"
+                    href="https://github.com/sujaudd1n/learnlang"
+                    sx={{
+                        color: "var(--text)",
+                    }}
+                >
+                    <GitHubIcon
+                        fontSize="small"
+                        sx={{ marginRight: "5px" }}
+                    />
+                    Contibute on Github
+                </Link>
+                <p
+                    css={css`
             font-size: small;
             `}
-            >&copy; learnlang {new Date().getFullYear()}</p>
+                >
+                    &copy; LearnLang {new Date().getFullYear()}
+                </p>
+            </Stack>
         </footer >
     )
 }
