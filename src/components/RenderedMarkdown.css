@@ -28,3 +28,9 @@ pre:has(> code)
     padding: 10px;
     border-radius: 10px;
 }
+
+pre code
+{
+    display: block;
+    overflow: auto;
+}
