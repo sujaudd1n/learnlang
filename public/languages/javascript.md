@@ -17,7 +17,7 @@ used in many different contexts, so there are many resources available
 to help you learn.
 
 
-## **Step 1: Learn Types and Typing**
+## Step 1: Learn Types and Typing
 
 JavaScript is a **Weakly Typed Language**. Weak typing means that
 JavaSc ript does not enforce the type of a variable at runtime.
@@ -59,7 +59,7 @@ type-related errors may only be caught at runtime, rather than at
 compile-time.
 
 
-## **Step 2: Learn Language Primitives**
+## Step 2: Learn Language Primitives
 
 One of the primary building blocks is variables,
 which are used to store and manipulate values. Variables can be declared
@@ -246,7 +246,7 @@ numbers3.pop();
 console.log(numbers3); // Output: [1, 2, 3, 4, 5]
 ```
 
-**Step 3: Learn Abstraction Mechanisms**
+## Step 3: Learn Abstraction Mechanisms
 
 JavaScript is a high-level, dynamic, and interpreted programming language
 that is primarily used for client-side scripting on the web. One of the
@@ -331,7 +331,7 @@ import { greet } from './greeter';
 greet('John'); // Output: Hello, John!
 ```
 
-**Step 4: Learn Language Idioms**
+## Step 4: Learn Language Idioms
 
 JavaScript is a unique language with its own set of idioms, which are common
 patterns and expressions that are used to solve specific problems or
@@ -483,7 +483,7 @@ used extensively in modern JavaScript development. By mastering these
 idioms, developers can write more concise, readable, and maintainable
 code.
 
-**Step 5: Learn Libraries and Dependency Management**
+## Step 5: Learn Libraries and Dependency Management
 
 JavaScript library management is unique compared to other languages due 
 to the language's dynamic nature, the web's decentralized architecture, 
@@ -536,7 +536,7 @@ for production environments, and regularly reviewing and updating
 dependencies to ensure security and compatibility.
 
 
-**Step 6: Learn Debugging**
+## Step 6: Learn Debugging
 
 When debugging JavaScript, the primary goal is to locate the source of
 the error, understand the cause, and make the necessary corrections. One 
@@ -574,7 +574,7 @@ By combining these techniques with the right tools and best practices,
 developers can quickly and effectively identify and fix errors in their 
 JavaScript code, resulting in faster development and more reliable applications.
 
-**Step 7: Learn Testing**
+## Step 7: Learn Testing
 
 When learning JavaScript testing, it's essential to start with the basic
 s of testing frameworks and libraries. Jest and Mocha are two popular
