@@ -1,3 +1,3 @@
 # C
 
-On progress. Contribute of Github.
+Work in progress. We welcome contributions on GitHub.
