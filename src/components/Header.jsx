@@ -2,6 +2,8 @@
 import { css } from "@emotion/react";
 import Button from '@mui/joy/Button';
 import { Stack } from "@mui/joy";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 
 export default function Header() {
@@ -49,15 +51,16 @@ export default function Header() {
                     justifyContent="center"
                     spacing={2}
                 >
-                    <Button
-                        onClick={() => window.location.replace(window.location.origin + "#steps")}
-                    >
-                        Get Started</Button>
-                    <Button
-                        variant="soft"
-                        onClick={() => window.location.replace(window.location.origin + "#selectlang")}
-                    >
-                        Select Language</Button>
+                    <Link to="/steps">
+                        <Button>
+                            Get Started
+                        </Button>
+                    </Link>
+                    <HashLink to="#selectlang">
+                        <Button variant="soft">
+                            Select Language
+                        </Button>
+                    </HashLink>
                 </Stack>
             </Stack>
         </header>
