@@ -1,7 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react"
 import { Link, Stack } from "@mui/joy"
+import { Link as RRLink } from "react-router-dom";
 import GitHubIcon from '@mui/icons-material/GitHub';
+import InfoIcon from '@mui/icons-material/Info';
 
 export default function Footer() {
     return (
@@ -24,7 +26,9 @@ export default function Footer() {
 
             >
 
-                <Stack>
+                <Stack
+                    spacing={1}
+                >
                     <Link
                         underline="none"
                         target="_blank"
@@ -38,6 +42,21 @@ export default function Footer() {
                             sx={{ marginRight: "5px" }}
                         />
                         Contibute on Github
+                    </Link>
+                    <Link
+                        component={RRLink}
+                        to="/about"
+                        sx={{
+                            color: "var(--text)"
+                        }}
+                    >
+                        <InfoIcon
+                            fontSize="small"
+                            sx={{
+                                marginRight: "5px"
+                            }}
+                        />
+                        About
                     </Link>
                     <p
                         css={css`

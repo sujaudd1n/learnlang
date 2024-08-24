@@ -35,6 +35,7 @@ function App() {
           />
         ))}
         <Route path="/steps" element={<RenderedMarkdown filepath="/steps.md" />} />
+        <Route path="/about" element={<RenderedMarkdown filepath="/about.md" />} />
       </Routes>
 
       <Footer />
