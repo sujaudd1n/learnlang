@@ -20,6 +20,7 @@ const languages = [
   createLanguageObject("Python", "/languages/python", "#3776AB", "/icons/python.svg"),
   createLanguageObject("C", "/languages/c", "#A8B9CC", "/icons/c.svg"),
   createLanguageObject("C++", "/languages/cpp", "#00599C", "/icons/cplusplus.svg"),
+  createLanguageObject("NodeJS", "/languages/nodejs", "#5FA04E", "/icons/nodedotjs.svg"),
 ]
 
 function App() {
