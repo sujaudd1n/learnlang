@@ -528,6 +528,165 @@ building blocks is essential for any C++ programmer.
 
 ## Abstraction Mechanisms 
 
+Let's dive deeper into the primitive mechanisms of C++.
+
+**Encapsulation**
+
+In C++, encapsulation is achieved through the use of classes and objects. A
+class is a blueprint or a template that defines the characteristics and behavior
+of an object. An object is an instance of a class, and it has its own set of
+attributes (data) and methods (functions) that operate on that data.
+
+Here's an example:
+
+```cpp
+class BankAccount {
+private:
+    double balance;
+
+public:
+    BankAccount(double initialBalance) {
+        balance = initialBalance;
+    }
+
+    void deposit(double amount) {
+        balance += amount;
+    }
+
+    double getBalance() {
+        return balance;
+    }
+};
+```
+In this example, the `BankAccount` class encapsulates the `balance` attribute
+and provides methods to deposit money and retrieve the balance. The `balance`
+attribute is private, meaning it can only be accessed through the provided
+methods.
+
+**Inheritance**
+
+Inheritance is a mechanism that allows one class to inherit the properties and
+behavior of another class. The inheriting class is called the derived class, and
+the class being inherited from is called the base class.
+
+Here's an example:
+
+```cpp
+class Vehicle {
+public:
+    void honk() {
+        cout << "Honk!" << endl;
+    }
+};
+
+class Car : public Vehicle {
+public:
+    void accelerate() {
+        cout << "Vroom!" << endl;
+    }
+};
+```
+
+In this example, the `Car` class inherits the `honk()` method from the `Vehicle`
+class and adds its own `accelerate()` method.
+
+**Polymorphism**
+
+Polymorphism is the ability of an object to take on multiple forms, depending on
+the context in which it's used. In C++, polymorphism is achieved through
+function overloading and function overriding.
+
+**Function Overloading**
+
+Function overloading is when multiple functions with the same name can be
+defined, as long as they have different parameter lists.
+
+Here's an example:
+
+```cpp
+class Calculator {
+public:
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+};
+```
+
+In this example, the `add()` function is overloaded to accept either two `int`
+parameters or two `double` parameters.
+
+**Function Overriding**
+
+Function overriding is when a derived class provides a different implementation
+of a function already defined in its base class.
+
+Here's an example:
+```cpp
+class Shape {
+public:
+    virtual void draw() {
+        cout << "Drawing a shape." << endl;
+    }
+};
+
+class Circle : public Shape {
+public:
+    void draw() {
+        cout << "Drawing a circle." << endl;
+    }
+};
+```
+In this example, the `Circle` class overrides the `draw()` function of the
+`Shape` class.
+
+**Operator Overloading**
+
+Operator overloading is a feature of C++ that allows operators such as +, -, \*,
+/, etc. to be redefined for user-defined data types.
+
+Here's an example:
+```cpp
+class Complex {
+private:
+    double real;
+    double imag;
+
+public:
+    Complex(double r, double i) {
+        real = r;
+        imag = i;
+    }
+
+    Complex operator+(const Complex& other) {
+        return Complex(real + other.real, imag + other.imag);
+    }
+};
+```
+In this example, the `+` operator is overloaded to add two `Complex` objects
+together.
+
+**Templates**
+
+Templates are a feature of C++ that allows functions and classes to be defined
+with generic types, which can be instantiated with specific types at
+compile-time.
+
+Here's an example:
+```cpp
+template <typename T>
+T max(T a, T b) {
+    return (a > b)? a : b;
+}
+```
+In this example, the `max()` function is defined with a generic type `T`, which
+can be instantiated with specific types such as `int`, `double`, etc.
+
+These are some of the primitive mechanisms of C++. They provide the foundation for more advanced concepts such as object-oriented programming, generic programming, and metaprogramming.
+
 ## Language Idioms 
 
 ## Libraries and Dependency Management 
