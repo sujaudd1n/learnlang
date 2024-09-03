@@ -689,6 +689,172 @@ These are some of the primitive mechanisms of C++. They provide the foundation f
 
 ## Language Idioms 
 
+An idiom is a common pattern or expression that solves a specific problem or
+achieves a particular goal. Idioms are often used to overcome language
+limitations, work around common pitfalls, or simply to write more expressive and
+concise code. They're not part of the language's syntax, but rather a set of
+best practices and conventions that have evolved over time through the
+collective experience of C++ developers.
+
+**1. RAII (Resource Acquisition Is Initialization)**
+
+RAII is a fundamental idiom in C++ that ensures resources, such as memory or
+file handles, are properly released when they go out of scope. This idiom is
+commonly implemented using smart pointers like `std::unique_ptr` and
+`std::shared_ptr`.
+
+**Example:**
+```cpp
+{
+    std::unique_ptr<File> file(new File("example.txt"));
+    // use file
+} // file is automatically deleted when it goes out of scope
+```
+**Benefits:**
+
+* Ensures resources are released in a timely manner, preventing memory leaks and
+  resource exhaustion.
+* Reduces the risk of dangling pointers and use-after-free bugs.
+
+**2. The Rule of Five**
+
+The Rule of Five is an idiom that helps manage the "big five" special member
+functions:
+
+* Constructor
+* Destructor
+* Copy constructor
+* Copy assignment operator
+* Move assignment operator
+
+This idiom ensures proper object lifetime management and helps prevent common
+pitfalls.
+
+**Example:**
+```cpp
+class MyClass {
+public:
+    MyClass() = default;
+    ~MyClass() = default;
+    MyClass(const MyClass&) = default;
+    MyClass& operator=(const MyClass&) = default;
+    MyClass(MyClass&&) = default;
+    MyClass& operator=(MyClass&&) = default;
+};
+```
+**Benefits:**
+
+* Ensures that objects are properly initialized and cleaned up.
+* Prevents common pitfalls like double-deletion and use-after-free bugs.
+
+**3. Move Semantics**
+
+Move semantics is an idiom that enables efficient transfer of ownership and
+reduces unnecessary copies.
+
+**Example:**
+```cpp
+std::string str = "hello";
+std::string str2 = std::move(str); // transfer ownership
+```
+**Benefits:**
+
+* Reduces unnecessary copies and improves performance.
+* Enables efficient transfer of ownership, reducing the risk of dangling
+  pointers.
+
+**4. SFINAE (Substitution Failure Is Not An Error)**
+
+SFINAE is an idiom that allows you to write generic code that can be
+instantiated only when certain conditions are met.
+
+**Example:**
+```cpp
+template <typename T>
+auto foo(T t) -> decltype(t.bar()) {
+    return t.bar();
+}
+```
+**Benefits:**
+
+* Enables generic programming and reduces code duplication.
+* Prevents compilation errors by ensuring that the code can only be instantiated
+  when the conditions are met.
+
+**5. Smart Pointers**
+
+Smart pointers are an idiom that provides automatic memory management.
+
+**Example:**
+```cpp
+std::unique_ptr<int> ptr(new int(5));
+```
+**Benefits:**
+
+* Provides automatic memory management, reducing the risk of memory leaks and
+  dangling pointers.
+* Improves code readability and maintainability.
+
+**6. std::vector and std::array**
+
+`std::vector` and `std::array` are idioms for dynamic and fixed-size arrays,
+respectively.
+
+**Example:**
+```cpp
+std::vector<int> vec = {1, 2, 3};
+std::array<int, 3> arr = {1, 2, 3};
+```
+**Benefits:**
+
+* Provides a safe and efficient way to work with arrays.
+* Reduces the risk of buffer overflows and out-of-bounds access.
+
+**7. std::tuple and std::pair**
+
+`std::tuple` and `std::pair` are idioms for working with multiple values.
+
+**Example:**
+```cpp
+std::tuple<int, int> t(1, 2);
+std::pair<int, int> p(1, 2);
+```
+**Benefits:**
+
+* Provides a convenient way to work with multiple values.
+* Reduces code duplication and improves readability.
+
+**8. std::function and std::bind**
+
+`std::function` and `std::bind` are idioms for functional programming.
+
+**Example:**
+```cpp
+std::function<void(int)> f = [](int x) { std::cout << x; };
+std::bind(f, 5)(); // calls f with argument 5
+```
+**Benefits:**
+
+* Enables functional programming and reduces code duplication.
+* Improves code readability and maintainability.
+
+**9. std::unique_lock and std::shared_lock**
+
+`std::unique_lock` and `std::shared_lock` are idioms for synchronization and
+concurrency.
+
+**Example:**
+```cpp
+std::mutex mtx;
+std::unique_lock<std::mutex> lock(mtx);
+```
+**Benefits:**
+
+* Provides a safe and efficient way to synchronize access to shared resources.
+* Improves code readability and maintainability.
+
+These idioms are just a few examples of the many idioms available in C++.
+
 ## Libraries and Dependency Management 
 
 ## Debugging 
