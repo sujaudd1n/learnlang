@@ -1101,4 +1101,94 @@ corruption.
 
 ## Testing
 
-Work in progress. We welcome contributions on GitHub.
+Testing is an essential part of the development
+process to ensure your code is reliable, stable, and functions as expected.
+Here's a rundown on how to test your C++ code:
+
+**Unit Testing**
+
+In C++, unit testing involves writing separate test functions to verify
+individual units of code, such as functions or classes. You can use frameworks
+like Google Test or Boost.Test to write and run your tests. These frameworks
+provide macros and functions to help you write and organize your tests.
+
+To write a unit test in C++, you'll typically create a separate test file (e.g.,
+`my_test.cpp`) and include the header file of the code you want to test (e.g.,
+`my_code.h`). Then, you'll write test functions using the framework's macros,
+such as `TEST` or `BOOST_AUTO_TEST_CASE`. These functions will call the code
+you're testing and verify its output using assertions, like `ASSERT_EQ` or
+`BOOST_CHECK_EQUAL`.
+
+For example, if you have a function `add(int a, int b)` in `my_code.h`, your
+test file might look like this:
+```cpp
+#include "my_code.h"
+#include <gtest/gtest.h>
+
+TEST(AddFunctionTest, PositiveNumbers) {
+  int result = add(2, 3);
+  ASSERT_EQ(5, result);
+}
+
+TEST(AddFunctionTest, NegativeNumbers) {
+  int result = add(-2, -3);
+  ASSERT_EQ(-5, result);
+}
+```
+**Integration Testing**
+
+Integration testing in C++ involves testing how different units of code interact
+with each other. This can be done by writing test functions that call multiple
+functions or classes and verify the overall behavior.
+
+To perform integration testing, you can use the same frameworks as unit testing,
+but you'll need to create test cases that cover more complex scenarios. For
+example, if you have a class `BankAccount` with methods `deposit` and
+`withdraw`, your test might look like this:
+```cpp
+TEST(BankAccountTest, DepositAndWithdraw) {
+  BankAccount account;
+  account.deposit(100);
+  account.withdraw(50);
+  ASSERT_EQ(50, account.getBalance());
+}
+```
+**Mocking**
+
+In C++, mocking involves creating fake objects or functions to isolate
+dependencies and test specific parts of your code. This is particularly useful
+when testing code that interacts with external libraries or systems.
+
+You can use libraries like Google Mock or FakeIt to create mock objects in C++.
+These libraries provide macros and functions to define mock behavior and verify
+interactions.
+
+For example, if you have a function `sendEmail` that depends on an external
+email library, you can create a mock object to simulate the email sending
+process:
+```cpp
+#include <gmock/gmock.h>
+
+class EmailServiceMock {
+ public:
+  MOCK_METHOD(void, sendEmail, (const std::string&), (override));
+};
+
+TEST(EmailSenderTest, SendEmail) {
+  EmailServiceMock emailService;
+  EXPECT_CALL(emailService, sendEmail("hello@example.com"));
+  sendEmail("hello@example.com");
+}
+```
+**Testing Best Practices**
+
+When testing C++ code, keep the following best practices in mind:
+
+* Write tests before or alongside your code (Test-Driven Development, TDD).
+* Keep tests independent and focused on specific functionality.
+* Use descriptive test names and assertions.
+* Test for both happy paths and error scenarios.
+* Use mocking to isolate dependencies and test specific parts of your code.
+
+By following these guidelines and using the right testing frameworks, you'll be
+well on your way to writing robust and reliable C++ code. Happy testing!
