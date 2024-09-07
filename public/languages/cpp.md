@@ -948,6 +948,157 @@ To effectively manage libraries and dependencies in C++, follow these best pract
 
 ## Debugging 
 
+**Using the Compiler's Error Messages**
+
+When you compile your C++ code, the compiler will often provide error messages
+that can help you identify the source of the problem. These messages usually
+include the file name, line number, and a brief description of the error. For
+example, if you forget to include the `iostream` header file, the compiler might
+output an error message like `error: 'cout' was not declared in this scope`.
+Take note of the file name and line number, and head to that location in your
+code to investigate.
+
+**Using Print Statements**
+
+One of the simplest ways to debug your C++ code is to use print statements to
+output the values of variables at different points in your program. This can
+help you understand the flow of your program and identify where things are going
+wrong. In C++, you can use `std::cout` to print to the console. For example, you
+might add a print statement like `std::cout << "x = " << x << std::endl;` to see
+the value of the variable `x` at a particular point in your code.
+
+**Using a Debugger**
+
+A debugger is a powerful tool that allows you to step through your code line by
+line, examining the values of variables and expressions as you go. In C++, you
+can use a debugger like `gdb` (GNU Debugger) or a graphical debugger like `lldb`
+(LLDB). To use a debugger, you'll typically compile your code with the `-g` flag
+to include debugging symbols, and then run the debugger on your executable. From
+there, you can set breakpoints, step through your code, and examine variables to
+identify the source of the problem.
+
+**Using Debugging Tools**
+
+C++ provides several debugging tools that can help you identify issues in your
+code. For example, you can use `assert` statements to verify that certain
+conditions are true at specific points in your code. If an assertion fails, your
+program will terminate and display an error message. You can also use
+`std::cerr` to print error messages to the standard error stream.
+
+**Tools:**
+
+1. **gdb (GNU Debugger)**: A command-line debugger that's widely used in the industry.
+2. **lldb (LLDB)**: A graphical debugger that's part of the LLVM project.
+3. **Valgrind**: A memory debugging tool that helps detect memory leaks and other memory-related issues.
+
+Here are some examples of debugging techniques and tools in C++:
+
+**Example 1: Using gdb to Debug a Segmentation Fault**
+
+Suppose we have a C++ program that crashes with a segmentation fault:
+```c
+#include <iostream>
+
+int main() {
+    int* p = nullptr;
+    *p = 5; // segmentation fault
+    return 0;
+}
+```
+To debug this program using gdb, we can compile it with the `-g` flag to include
+debugging symbols:
+```bash
+$ g++ -g segfault.cpp -o segfault
+```
+Then, we can run the program under gdb:
+```bash
+$ gdb ./segfault
+```
+When the program crashes, gdb will stop at the point where the segmentation
+fault occurred:
+```
+(gdb) run
+Starting program: /path/to/segfault
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00005555555551f5 in main () at segfault.cpp:5
+5               *p = 5;
+```
+We can then use gdb commands to examine the value of `p` and see that it's a
+null pointer:
+```
+(gdb) print p
+$1 = 0x0
+```
+**Example 2: Using lldb to Debug a Memory Leak**
+
+Suppose we have a C++ program that leaks memory:
+```c
+#include <iostream>
+
+int main() {
+    int* p = new int[10];
+    // forget to delete p
+    return 0;
+}
+```
+To debug this program using lldb, we can compile it with the `-g` flag to
+include debugging symbols:
+```bash
+$ g++ -g memory_leak.cpp -o memory_leak
+```
+Then, we can run the program under lldb:
+```bash
+$ lldb ./memory_leak
+```
+When the program finishes running, lldb will report a memory leak:
+```
+(lldb) run
+Process 12345 exited with status = 0
+(lldb) memory leak
+ 1 memory leak of 40 bytes
+ 1 (100.0%) 40 bytes in 1 block
+```
+We can then use lldb commands to examine the stack trace and see where the
+memory was allocated:
+```
+(lldb) thread backtrace
+* thread #1, queue = 'com.apple.main-thread', stop reason = breakpoint 1.1
+  * frame #0: 0x00007fff6c8e14ae libsystem_malloc.dylib`malloc + 10
+    frame #1: 0x00005555555551f5 memory_leak`main + 15 at memory_leak.cpp:5
+```
+**Example 3: Using Valgrind to Detect Memory Corruption**
+
+Suppose we have a C++ program that corrupts memory:
+```c
+#include <iostream>
+
+int main() {
+    int* p = new int[10];
+    p[10] = 5; // memory corruption
+    return 0;
+}
+```
+To debug this program using Valgrind, we can compile it with the `-g` flag to
+include debugging symbols:
+```bash
+$ g++ -g memory_corruption.cpp -o memory_corruption
+```
+Then, we can run the program under Valgrind:
+```bash
+$ valgrind ./memory_corruption
+```
+Valgrind will report a memory corruption error:
+```
+==12345== Invalid write of size 4
+==12345==    at 0x1085F5: main (memory_corruption.cpp:5)
+==12345==  Address 0x522d050 is 0 bytes after a block of size 40 alloc'd
+==12345==    at 0x4C2B3F8: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12345==    by 0x1085E5: main (memory_corruption.cpp:4)
+```
+We can then use Valgrind's output to identify the source of the memory
+corruption.
+
 ## Testing
 
 Work in progress. We welcome contributions on GitHub.
