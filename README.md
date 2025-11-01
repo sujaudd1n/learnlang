@@ -9,15 +9,9 @@
 <div align="center">
 
 [![Start Learning](https://img.shields.io/badge/Start_Learning-blue)](https://learnlang.onrender.com)
-
-</div>
-
-<div align="center">
-
-![License](https://img.shields.io/badge/License-MIT-green)
-![Website](https://img.shields.io/badge/Website-Online-green)
     
 </div>
+
 
 ## Quick Look
 
@@ -31,7 +25,21 @@ Steps to learn a new language
 - Debugging
 - Testing
 
+## Exercises
+
+To help you with practices, there are some exercises you should do. For every languages,
+the exercises are similar. The goal of these exercises are, starting from, to make you
+familier with the language, to the common day to day task one has to such as network
+request, concurrency etc. All these exercises will be practical in nature, so that you
+don't get bored and have fun along the way.
+
+Also, these will concise in nature so that you don't get overwhelmed with information.
+Links will be provided to learn more.
+
 ## Share
+
+If you find this useful, please help it to grow by sharing the repo or site
+link with a short message on how you find it useful.
 
 <div align="center">
 
