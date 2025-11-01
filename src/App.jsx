@@ -38,6 +38,7 @@ function App() {
         ))}
         <Route path="/steps" element={<RenderedMarkdown filepath="/steps.md" />} />
         <Route path="/about" element={<RenderedMarkdown filepath="/about.md" />} />
+        <Route path="/practice" element={<RenderedMarkdown filepath="/practice.md" />} />
       </Routes>
 
       <Footer />
